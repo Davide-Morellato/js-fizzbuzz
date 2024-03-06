@@ -1,0 +1,16 @@
+/* Reset Rules */
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul, ol, menu{
+    list-style: none;
+}
+
+.main_grid{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+}
