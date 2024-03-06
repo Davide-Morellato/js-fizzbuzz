@@ -46,13 +46,13 @@ for (let i = 0; i < n; i++){
     //      3.a DICHIARO LA CONDIZIONE SIA multipliTre SIA multipliCinque
 
 
-    let multipliTre = (num % 3)
-    let multipliCinque = (num % 5)
+    let multipliTre = (num % 3) ;
+    let multipliCinque = (num % 5) ;
     
     // CALCOLO
 
     if (multipliTre === 0 && multipliCinque === 0){     // 1. SE multipliTre (num % 3) AND multipliCinque (num % 5) STRETTAMENTE UGUALE (===) 0
-        console.log('fizzbuzz')                         //    STAMPARE IN CONSOLE "fizzbuzz"
+        console.log('fizzbuzz') ;                       //    STAMPARE IN CONSOLE "fizzbuzz"
     }else if (multipliCinque === 0){                    // 2. multipliCinque (num % 5) STRETTAMENTE UGUALE (===) 0 STAMPARE IN CONSOLE "buzz"  
         console.log('buzz') ;
     }else if (multipliTre === 0){                       // 3. multipliTre (num % 3) STRETTAMENTE UGUALE (===) 0 STAMPARE IN CONSOLE "fizz" 
@@ -60,5 +60,4 @@ for (let i = 0; i < n; i++){
     }else{                                              // 1. SE NUSSUNA DELLE PRECEDENTI STAMPARE IN CONSOLE LA VARIABILE num
         console.log(num) ;
     } 
-
 }
