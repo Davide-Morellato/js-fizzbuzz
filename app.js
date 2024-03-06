@@ -51,23 +51,14 @@ for (let i = 0; i < n; i++){
     
     // CALCOLO
 
-    if (multipliTre && multipliCinque){     
-        console.log('fizzbuzz')
-    } else if(multipliTre !== 0 && multipliCinque !== 0){
-        console.log(num) ;
-    } else if (multipliCinque === 0){
+    if (multipliTre === 0 && multipliCinque === 0){     // 1. SE multipliTre (num % 3) AND multipliCinque (num % 5) STRETTAMENTE UGUALE (===) 0
+        console.log('fizzbuzz')                         //    STAMPARE IN CONSOLE "fizzbuzz"
+    }else if (multipliCinque === 0){                    // 2. multipliCinque (num % 5) STRETTAMENTE UGUALE (===) 0 STAMPARE IN CONSOLE "buzz"  
         console.log('buzz') ;
-    } else if (multipliTre === 0){
+    }else if (multipliTre === 0){                       // 3. multipliTre (num % 3) STRETTAMENTE UGUALE (===) 0 STAMPARE IN CONSOLE "fizz" 
         console.log('fizz') ;
-    }
-
-
-
-    
-    
-  
-
-    // CALCOLO
-
+    }else{                                              // 1. SE NUSSUNA DELLE PRECEDENTI STAMPARE IN CONSOLE LA VARIABILE num
+        console.log(num) ;
+    } 
 
 }
