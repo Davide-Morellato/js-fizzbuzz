@@ -13,11 +13,13 @@
 
 
 
+
 // BONUS    
-// MI PRENDO L'ELEMENTO ul DAL DOM [document.querySelector('.class')]
+// RECUPERO L'ELEMENTO ul DAL DOM MEDIANTE LA SUA CLASSE [document.querySelector('.class')]
+// (fuori dal ciclo, perchè mi serve una sola volta. Se lo svolgessi nel ciclo,
+//  il suo recupero avverrebbe stante volte quante sono le iterazioni del ciclo)
 
 const ulElement = document.querySelector('.main_grid')
-
 
 
 // STAMPARE DA 1 A 100
@@ -44,11 +46,10 @@ for (let i = 0; i < n; i++){
 
 
 
-
     // BONUS
-    // 1. CREO UN ELEMENTO NEL DOM [document.createElement('')]
-    // 2. ASSEGNO COME PADRE DI li LA VARIABILE ul
-    //    (che corrisponde al contenitore nel DOM) [.append()]
+    // CREO UN ELEMENTO liElement NEL DOM [document.createElement('')]
+    // ASSEGNO COME PADRE DI liElement LA VARIABILE ulElement
+    // (che corrisponde al contenitore nel DOM) [.append()]
 
     const liElement = document.createElement('li')
 
@@ -76,15 +77,19 @@ for (let i = 0; i < n; i++){
 
     if (multipliTre === 0 && multipliCinque === 0){     // 1. SE multipliTre (num % 3) AND multipliCinque (num % 5) STRETTAMENTE UGUALE (===) 0
         console.log('fizzbuzz') ;                       //    STAMPARE IN CONSOLE "fizzbuzz"
+        liElement.classList.add('box', 'box-fizzbuzz') ;// BONUS: AGGIUNGO CLASSI ALL'ELEMENTO [.classList.add('', '')]                          
         liElement.innerHTML = 'fizzbuzz' ;// BONUS: AGGIUNGO CONTENUTO NELL'ELEMENTO [.innerHTML]     
     }else if (multipliCinque === 0){                    // 2. multipliCinque (num % 5) STRETTAMENTE UGUALE (===) 0 STAMPARE IN CONSOLE "buzz"  
         console.log('buzz') ;
+        liElement.classList.add('box', 'box-buzz') ;// BONUS: AGGIUNGO CLASSI ALL'ELEMENTO [.classList.add('', '')]
         liElement.innerHTML = 'buzz' ;// BONUS: AGGIUNGO CONTENUTO NELL'ELEMENTO [.innerHTML] 
     }else if (multipliTre === 0){                       // 3. multipliTre (num % 3) STRETTAMENTE UGUALE (===) 0 STAMPARE IN CONSOLE "fizz" 
         console.log('fizz') ;
+        liElement.classList.add('box', 'box-fizz') ;// BONUS: AGGIUNGO CLASSI ALL'ELEMENTO [.classList.add('', '')]
         liElement.innerHTML = 'fizz' ;// BONUS: AGGIUNGO CONTENUTO NELL'ELEMENTO [.innerHTML] 
     }else{                                              // 4. SE NUSSUNA DELLE PRECEDENTI STAMPARE IN CONSOLE LA VARIABILE num
         console.log(num) ;
+        liElement.classList.add('box', 'box-num') ;// BONUS: AGGIUNGO CLASSI ALL'ELEMENTO [.classList.add('', '')]
         liElement.innerHTML = num ;// BONUS: AGGIUNGO CONTENUTO NELL'ELEMENTO [.innerHTML] 
     }
 }
